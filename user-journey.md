@@ -28,15 +28,15 @@ The list below includes the .NET references we could find. The hyperlinks are *r
 
 ### Pages in the SonarQube Documentation
 
-[Azure DevOps integration](azure-devops-integration.md)
+[~~Azure DevOps integration~~](azure-devops-integration.md)
 
 [Test coverage parameters](test-coverage-parameters.md)
 
-[SonarScanner for .NET](sonarscanner-for-dotnet.md)
+[~~SonarScanner for .NET~~](sonarscanner-for-dotnet.md)
 
 [SonarQube extension for Azure DevOps](sonarqube-extension-for-azure-devops.md)
 
-[.NET test coverage](dotnet-test-coverage.md)
+[~~.NET test coverage~~](dotnet-test-coverage.md)
 
 ## External resources
 
