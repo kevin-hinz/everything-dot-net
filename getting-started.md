@@ -1,10 +1,10 @@
 Scanning a .NET application is a little different than when analyzing other languages and requires a dedicated scanner that works with MSBuild. How you set this up depends on your environment. Here we will cover the most common cases:
 1. Initiating a manual scan without CI integration
-2. Initiating a scan from your CI
-  3. Azure Devops - If this is the case follow the [Azure DevOps integration](azure-devops-integration.md) guide.
-  4. Jenkins
-  5. Github Actions
-  6. Gitlab
+1. Initiating a scan from your CI
+    1. Azure Devops - If this is the case follow the [Azure DevOps integration](azure-devops-integration.md) guide.
+    1. Jenkins
+    1. Github Actions
+    1. Gitlab
 
 The basic steps are as follows:
 1. Install Prequisites (Java)
