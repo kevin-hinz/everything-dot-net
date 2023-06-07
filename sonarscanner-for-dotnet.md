@@ -43,7 +43,7 @@ It supports .NET Core on every platform (Windows, macOS, Linux).
 ```
 dotnet tool install --global dotnet-sonarscanner --version x.x.x
 ```
-
+[* WE SHOULD MOVE THIS BIT ABOUT THE VERSION SOMEHWERE ELSE... HERE IS A VESION PROPERTY, BUT YOU DON'T NEED IT]
 The `--version` argument is optional. If it is omitted the latest version will be installed. The full list of releases is available on the [NuGet page](https://www.nuget.org/packages/dotnet-sonarscanner).
 
 .NET Core Global Tool is available from .NET Core 2.1+.
