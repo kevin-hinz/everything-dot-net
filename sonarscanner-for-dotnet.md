@@ -14,7 +14,7 @@ It supports .NET Core on every platform (Windows, macOS, Linux).
 
 ## Prerequisites
 
-[* TOM: Would it be possible to fit these prerequisites into a matrix, not unlike this one in the [.NET wikipedia](https://en.wikipedia.org/wiki/.NET_Framework_version_history) page?]
+[* **TOM**: Would it be possible to fit these prerequisites into a matrix, not unlike this one in the [.NET wikipedia](https://en.wikipedia.org/wiki/.NET_Framework_version_history) page?]
 
 -   At least the minimal version of Java supported by your SonarQube server
 -   The SDK corresponding to your build system:

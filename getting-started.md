@@ -1,7 +1,7 @@
 A brief history of the .NET story explains why there are essentially three ways to install and run the .NET SonarScanner.
 
 [TO DO](1-2 paragraphs of text for the history of .NET)
-[* TOM: would this be valuable? If we explained *why there are 3 versions*]
+[* **TOM**: would this be valuable? If we explained *why there are 3 versions*]
 
 Analyzing a .NET application is a little different than when analyzing other languages; whereas the SonarScanner normally scans existing code or already built projects, the SonarScanner for .NET instead steps through the code *while the build is in process*, gathering the results and sending them to SonarQube or SonarCloud for review once the build is complete.
 
@@ -14,16 +14,16 @@ Analyzing a .NET application is a little different than when analyzing other lan
     - but makes it harder for the user bcz they need a different scanner.
 
 # Moving forward
-[* TOM: this section gets a little muddy. Can you help me remember what the goal is? Do we want to determine which path the user should take?]
+[* **TOM**: this section gets a little muddy. Can you help me remember what the goal is? Do we want to determine which path the user should take?]
 
 How you set up your SonarScanner for .NET depends on your dev environment. You can either initiate a manual scan on your local machine or initiate a scan from your CI provider. Here we will cover the most common cases:
-    [* **TOM** I am not sure if we were to integrate this part, or if it's essencially the same information as in the next paragraph where we create the two branches: 1) Azure DevOps 2) everything else]
+[* **TOM** I am not sure if we were to integrate this part, or if it's essencially the same information as in the next paragraph where we create the two branches: 1) Azure DevOps 2) everything else]
 
 1. Initiating a manual scan without continuous integration (on your local machine). For details, please go to [this page](sonarscanner-for-dotnet.md)
 1. Initiating a scan from your CI. There are methods are available according to your CI/CD plattform:
 
-[* **TOM**: is there a unique integration menthod related between each CI & .NET, something *different* than non-dotnet projects?]
-[* **TOM**: can we chart this out in a flow diagram? if you *have this*, then *you go there*]
+[* **TOM**: Is there unique integration menthod related between each CI & .NET, something *different* than non-dotnet projects? I am trying to understand similarities and/or differences as a way to structure this part.]
+[* **TOM**: Would it make sense for us to chart this out in a flow diagram? if you *have this*, then *you go there*, etc...]
 
   1. Azure DevOps 
       - For SonarQube users, see the [SonarQube extension for Azure DevOps](sonarqube-extension-for-azure-devops.md)
@@ -40,13 +40,13 @@ For other CI/CD services, the [SonarScanner for .NET](sonarscanner-for-dotnet.md
 
 ALT
 [* THIS IS BRANCH 2, about the scanner, and how Roslyn works]
-[* **TOM** Are these steps applied to the *CI on local* or *CI in cloud* method?]
 The basic steps are as follows:
 1. Install Prequisites (Java)
 2. Install the correct Scanner version for you .NET runtime and Install
 3. Initiate the Scan
 5. (optional) Setup PR decoration
 6. (optional) Setup Code Coverage Import
+[* **TOM** Are these steps applied to the *CI on local* or *CI in cloud* method?]
 
 
 [* THE NEXT 3 SECTIONS NEED TO BE WRITTEN AS A UNIQUE BRANCH, FOR EACH OF THE 3 WAYS DESCRIBED BELOW]
@@ -82,11 +82,11 @@ Select your correct .NET environment below to find the correct install instructi
 
 ## Installation
 
-[* TOM: do we have a different installation proceedure for FRAMEWORK, CORE, and .NET? If yes, I think we should either have a seperate page, or integrate a collapsable (or tab) component for each version.]
-[* TOM: 
+[* **TOM**: do we have a different installation proceedure for FRAMEWORK, CORE, and .NET? If yes, I think we should either have a seperate page, or integrate a collapsable (or tab) component for each version.]
+[* **TOM**: 
   1) does the `dotnet tool` work only with the CORE and .NET versions? and 
   2) would it make sense, becuase FRAMEWORK is oldest, to *always list it first*, or is it better to *list FRAMEWORK last* becuase it is the less modern version?]
-[* TOM: the sonarscanner-for-dotnet page already talks about how to install. Do you think we can integrate the installtion there and keep the getting-started page high level?]
+[* **TOM**: the sonarscanner-for-dotnet page already talks about how to install. Do you think we can integrate the installtion there and keep the getting-started page high level?]
 
 You can use any version of the scanner that supports the .NET runtime in your environment. More details are available on the [SonarScanner for .NET](sonarscanner-for-dotnet.md) page. The simplest way to install the scanner if you are using .NET Core or later, is to run `dotnet tool install` from the command line.
 
@@ -109,11 +109,11 @@ If your build uses the .NET Framework, you'll need to download the .NET Framewor
 ## Initiating the Scan 
 ## ALT: Using the SonarScanner
 [* THIS SHOULD HAVE THREE BRANCHES, ONE FOR EACH OF THE PATHS FROM THE 3 PREREQ PATHS ABOVE.]
-[* TOM: Are the 3 prereqs above the FRAMEWORK, CORE, .NET versions? If yes, then we should use 3 pages/collapsable/tabs to segregate the information.]
-[* TOM: I only see 2 methods below; is it that the `dotnet tool` works for CORE & .NET?]
+[* **TOM**: Are the 3 prereqs above the FRAMEWORK, CORE, .NET versions? If yes, then we should use 3 pages/collapsable/tabs to segregate the information.]
+[* **TOM**: I only see 2 methods below; is it that the `dotnet tool` works for CORE & .NET?]
 
 Unlike other Sonar Scanners, the dotnet scan requires you to wrap your build command with a SonarScanner **Begin step** and **End step** that sets up the scan before sending the results to SonarQube or SonarCloud.
-[* TOM: What *is the begin step*, really?? I don't know whether to format it as `code` or `parameter`, as a **UI element**, or as a *special element*; or maybe it is simply a "begin step," with no special formatting?]
+[* **TOM**: What *is the begin step*, really?? I don't know whether to format it as `code` or `parameter`, as a **UI element**, or as a *special element*; or maybe it is simply a "begin step," with no special formatting?]
 
 For example if you are using the dotnet tool version, your build command could look like this:
 ```
