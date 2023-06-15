@@ -14,6 +14,8 @@ It supports .NET Core on every platform (Windows, macOS, Linux).
 
 ## Prerequisites
 
+[* **TOM**: Would it be possible to fit these prerequisites into a matrix, not unlike this one in the [.NET wikipedia](https://en.wikipedia.org/wiki/.NET_Framework_version_history) page?]
+
 -   At least the minimal version of Java supported by your SonarQube server
 -   The SDK corresponding to your build system:
     -   If you are using the .NET Framework version of the scanner you will need [.NET Framework v4.6 or above](https://dotnet.microsoft.com/en-us/download/dotnet-framework). For commercial versions of SonarQube to benefit from security analysis you will need [.NET Framework v4.7.2 or above](https://dotnet.microsoft.com/en-us/download/dotnet-framework)
@@ -43,7 +45,7 @@ It supports .NET Core on every platform (Windows, macOS, Linux).
 ```
 dotnet tool install --global dotnet-sonarscanner --version x.x.x
 ```
-
+[* WE SHOULD MOVE THIS BIT ABOUT THE VERSION SOMEHWERE ELSE... HERE IS A VESION PROPERTY, BUT YOU DON'T NEED IT]
 The `--version` argument is optional. If it is omitted the latest version will be installed. The full list of releases is available on the [NuGet page](https://www.nuget.org/packages/dotnet-sonarscanner).
 
 .NET Core Global Tool is available from .NET Core 2.1+.
