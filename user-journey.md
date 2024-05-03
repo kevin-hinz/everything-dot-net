@@ -59,3 +59,5 @@ The list below includes the .NET references we could find. The hyperlinks are *r
 ### Sonar Wikis
 
 [Sonar Scanner for .NET wiki](msbuild-wiki.md)
+
+...
